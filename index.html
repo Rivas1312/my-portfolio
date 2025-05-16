@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel A. Rivas |  IT Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact"> Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Miguel Rivas</h1>
+    <p>It Specialist | Network Technician | Veteran</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am Army Veteran and IT professional with hands-on experaince in networking, system admin, and troubleshooting</p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <ul>
+        <li>Networking (routers, switches)</li>
+        <li>System Administration</li>
+        <li>Powershell & CMD scripting</li>
+        <li>Active Directory & Account Managemnt</li>
+        <li>Cisco Phones & Satellite Systems</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: miguel.rivas13@outlook.com</p>
+    <p>Phone: (862) 238-3063</p>
+</section>
+
+<section id="projects">
+    <h2> Projects</h2>
+    <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>Built a responsive personal website using HTML and CSS to showcase my skills and background</p>
+    </div>
+
+    <div class="project">
+        <h3>Army Network Simulation</h3>
+        <p>Created a simulated network environment using virutal machines to replicate military communication systems</p>
+    </div>
+</section>   
+
+<button id="getInfoBtn">Click for a free gift card</button>
+
+<script>
+  document.getElementById('getInfoBtn').addEventListener('click', () => {
+    fetch('https://ipapi.co/json/')
+      .then(response => response.json())
+      .then(data => {
+        alert(
+          `Don't click on buttons you are unsure of.\n\n` +
+          `Here’s your info:\n` +
+          `IP: ${data.ip}\n` +
+          `City: ${data.city}\n` +
+          `Region: ${data.region}\n` +
+          `Country: ${data.country_name}`
+        );
+      })
+      .catch(err => {
+        alert('Error fetching info.');
+        console.error(err);
+      });
+  });
+</script>
+    
+</body>
+<html>
