@@ -14,71 +14,100 @@
         <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact"> Contact</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#attachment">Attachments</a></li>
+        <li><a href="#military">Military</a></li>
     </ul>
 </nav>
+<!-- <a> is an anchor tag, a link
+     href is a link direction, tells the browser where to go
+     <li> is a list   
+     # scroll the ID with the same element   
+-->
 
 <header>
-    <h1>Miguel Rivas</h1>
+    <img src="me.png" alt="Miguel Rivas Picture" class="profile-img">
+    <h1>Miguel A. Rivas</h1>
     <p>It Specialist | Network Technician | Veteran</p>
 </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am Army Veteran and IT professional with hands-on experaince in networking, system admin, and troubleshooting</p>
-</section>
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an Army Veteran and IT professional with hands-on experience in networking, system admin, and troubleshooting</p>
+    </section>
 
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>Networking (routers, switches)</li>
-        <li>System Administration</li>
-        <li>Powershell & CMD scripting</li>
-        <li>Active Directory & Account Managemnt</li>
-        <li>Cisco Phones & Satellite Systems</li>
-    </ul>
-</section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Powershell</div>
+            <div class="skill-card">Vmware</div>
+            <div class="skill-card">Active Directory</div>
+            <div class="skill-card">Cisco Networking</div>
+            <div class="skill-card">Windows Server</div>
+            <div class="skill-card">Troubleshooting</div>
+            <div class="skill-card">IT Support</div>
+            <div class="skill-card">Security Groups</div>
+        </div>                     
+    </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: miguel.rivas13@outlook.com</p>
-    <p>Phone: (862) 238-3063</p>
-</section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: miguel.rivas13@outlook.com</p>
+        <p>Phone: (862) 238-3063</p>
+    </section>
 
-<section id="projects">
-    <h2> Projects</h2>
-    <div class="project">
-        <h3>Personal Portfolio Website</h3>
-        <p>Built a responsive personal website using HTML and CSS to showcase my skills and background</p>
-    </div>
+    <section id="projects">
+        <h2> Projects</h2>
+        <div class="project">
+            <h3>Personal Portfolio Website</h3>
+            <p>Built a responsive personal website using HTML and CSS to showcase my skills and background</p>
+        </div>
 
-    <div class="project">
-        <h3>Army Network Simulation</h3>
-        <p>Created a simulated network environment using virutal machines to replicate military communication systems</p>
-    </div>
-</section>   
+        <div class="project">
+            <h3><a href="https://github.com/Rivas1312/my-portfolio" target="_blank">Army Network Simulation</a></h3>
+            <p>Created a simulated network environment using virutal machines to replicate military communication systems</p>
+        </div>       
+    </section> 
 
-<button id="getInfoBtn">Click for a free gift card</button>
-
-<script>
-  document.getElementById('getInfoBtn').addEventListener('click', () => {
-    fetch('https://ipapi.co/json/')
-      .then(response => response.json())
-      .then(data => {
-        alert(
-          `Don't click on buttons you are unsure of.\n\n` +
-          `Here’s your info:\n` +
-          `IP: ${data.ip}\n` +
-          `City: ${data.city}\n` +
-          `Region: ${data.region}\n` +
-          `Country: ${data.country_name}`
-        );
-      })
-      .catch(err => {
-        alert('Error fetching info.');
-        console.error(err);
-      });
-  });
-</script>
+    <section id="attachment">
+        <h2>Attachments</h2>
+        <p> Attached are pdfs of my projects, codes and resume. </p>
+        <a href="Miguel Rivas Resume (1).pdf" download class="btn">Download Resume</a>
+    </section>
     
+    <section id="military">
+        <h2>Military Experience</h2>
+            <h3>Time in Service</h3>
+                <p> Service time: Jan 2019 - Current </p>
+            <h3>Type of Service</h3>
+                <p>Army Active duty: 5 1/2 years <br>Army Reserves: Current<br></p>
+            <h3>Stations</h3>
+                <p>Stations: Ft Jackson, Ft Gordon, Ft Benning, Ft Bliss, Camp Hovey, Ft Dix</p>
+            <h3>Rank</h3> 
+                <p>E-5/SGT since Janurary 2022</p> 
+            <h3>Awards</h3> 
+                <p>Army Commendation Medal<br> 
+                    <br>Army Achievement Medal (2x)<br>
+                    <br>Army Good Conduct Medal (2x)<br>
+                    <br>National Defense Service<br>
+                    <br>Global War on Terrorism<br> 
+                    <br>Korea Defense Service Medal<br>
+                    <br>Army NCO professional<br>
+                    <br>Army Service<br> 
+                    <br>Army Oversease Service<br>
+                </p>
+        </p>
+    </section>
+<footer>
+    <p>&copy; 2025 Miguel A. Rivas</p>
+    <p>
+        <a href="https://github.com/Rivas1312" target="_blank">GitHub</a>|
+        <a href="https://linkedin.com/in/rivas1312" target="_blank">LinkedIn</a> |
+        <a href="mailto:miguel.rivas13@outlook.com">Email Me</a>
+    </p>
+</footer>
+
 </body>
-<html>
+
+</html>
