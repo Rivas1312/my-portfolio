@@ -134,6 +134,7 @@ html{
     background-color: #005a99;
 }
 
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -261,7 +262,7 @@ footer a:hover {
     font-weight: bold;
     z-index: 2100;
   }
-  
+
   .contact-form {
     max-width: 500px;
     margin: 0 auto;
@@ -412,4 +413,5 @@ footer a:hover {
       max-height: 500px; /* Large enough for all items */
     }
   }
+
   
